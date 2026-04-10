@@ -1,0 +1,315 @@
+<svg width="680" height="1400" viewBox="0 0 680 1400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <clipPath id="avatarClip">
+      <circle cx="60" cy="60" r="42"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="1400" fill="#080c14" rx="16"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.06" stroke="#0E5484" stroke-width="0.5">
+    <line x1="0" y1="40" x2="680" y2="40"/>
+    <line x1="0" y1="80" x2="680" y2="80"/>
+    <line x1="0" y1="120" x2="680" y2="120"/>
+    <line x1="0" y1="160" x2="680" y2="160"/>
+    <line x1="0" y1="200" x2="680" y2="200"/>
+    <line x1="0" y1="240" x2="680" y2="240"/>
+    <line x1="0" y1="280" x2="680" y2="280"/>
+    <line x1="0" y1="320" x2="680" y2="320"/>
+    <line x1="0" y1="360" x2="680" y2="360"/>
+    <line x1="0" y1="400" x2="680" y2="400"/>
+    <line x1="40" y1="0" x2="40" y2="1400"/>
+    <line x1="80" y1="0" x2="80" y2="1400"/>
+    <line x1="120" y1="0" x2="120" y2="1400"/>
+    <line x1="160" y1="0" x2="160" y2="1400"/>
+    <line x1="200" y1="0" x2="200" y2="1400"/>
+    <line x1="240" y1="0" x2="240" y2="1400"/>
+    <line x1="280" y1="0" x2="280" y2="1400"/>
+    <line x1="320" y1="0" x2="320" y2="1400"/>
+    <line x1="360" y1="0" x2="360" y2="1400"/>
+    <line x1="400" y1="0" x2="400" y2="1400"/>
+    <line x1="440" y1="0" x2="440" y2="1400"/>
+    <line x1="480" y1="0" x2="480" y2="1400"/>
+    <line x1="520" y1="0" x2="520" y2="1400"/>
+    <line x1="560" y1="0" x2="560" y2="1400"/>
+    <line x1="600" y1="0" x2="600" y2="1400"/>
+    <line x1="640" y1="0" x2="640" y2="1400"/>
+  </g>
+
+  <!-- Corner brackets -->
+  <path d="M20 36 L20 20 L36 20" fill="none" stroke="#0E5484" stroke-width="2"/>
+  <path d="M644 20 L660 20 L660 36" fill="none" stroke="#0E5484" stroke-width="2"/>
+  <path d="M20 1364 L20 1380 L36 1380" fill="none" stroke="#0E5484" stroke-width="2"/>
+  <path d="M644 1380 L660 1380 L660 1364" fill="none" stroke="#0E5484" stroke-width="2"/>
+
+  <!-- Avatar ring -->
+  <circle cx="76" cy="76" r="48" fill="none" stroke="#0E5484" stroke-width="3" opacity="0.8"/>
+  <circle cx="76" cy="76" r="42" fill="#0d1b2a"/>
+  <text x="76" y="84" font-family="monospace" font-size="22" font-weight="700" fill="#0E5484" text-anchor="middle">CB</text>
+
+  <!-- Name + title -->
+  <text x="148" y="62" font-family="sans-serif" font-size="26" font-weight="700" fill="#e8f4ff" letter-spacing="1">Chetan Biranje</text>
+  <text x="148" y="84" font-family="monospace" font-size="11" fill="#0E5484" letter-spacing="2">// AppSec Engineer · Bug Hunter · DevSecOps</text>
+  <text x="148" y="104" font-family="monospace" font-size="10" fill="#3a6a8a">[ Pune, Maharashtra, India · BCA @ D.Y. Patil University ]</text>
+
+  <!-- Badges row 1 -->
+  <rect x="32" y="136" width="88" height="22" rx="3" fill="#0E548422" stroke="#0E548480" stroke-width="1"/>
+  <text x="76" y="152" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">WEB VAPT</text>
+
+  <rect x="128" y="136" width="100" height="22" rx="3" fill="#0E548422" stroke="#0E548480" stroke-width="1"/>
+  <text x="178" y="152" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">API SECURITY</text>
+
+  <rect x="236" y="136" width="98" height="22" rx="3" fill="#dc354522" stroke="#dc354570" stroke-width="1"/>
+  <text x="285" y="152" font-family="monospace" font-size="9" fill="#ff7070" text-anchor="middle" letter-spacing="1">BUG BOUNTY</text>
+
+  <rect x="342" y="136" width="96" height="22" rx="3" fill="#00b46422" stroke="#00b46470" stroke-width="1"/>
+  <text x="390" y="152" font-family="monospace" font-size="9" fill="#4de8a0" text-anchor="middle" letter-spacing="1">DEVSECOPS</text>
+
+  <rect x="446" y="136" width="88" height="22" rx="3" fill="#c88c0022" stroke="#c88c0070" stroke-width="1"/>
+  <text x="490" y="152" font-family="monospace" font-size="9" fill="#ffc14d" text-anchor="middle" letter-spacing="1">SAST / DAST</text>
+
+  <!-- Badges row 2 -->
+  <rect x="32" y="164" width="72" height="22" rx="3" fill="#8c50dc22" stroke="#8c50dc70" stroke-width="1"/>
+  <text x="68" y="180" font-family="monospace" font-size="9" fill="#c490f5" text-anchor="middle" letter-spacing="1">STRIDE</text>
+
+  <rect x="112" y="164" width="138" height="22" rx="3" fill="#0E548422" stroke="#0E548480" stroke-width="1"/>
+  <text x="181" y="180" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">ANDROID SECURITY</text>
+
+  <rect x="258" y="164" width="114" height="22" rx="3" fill="#00b46422" stroke="#00b46470" stroke-width="1"/>
+  <text x="315" y="180" font-family="monospace" font-size="9" fill="#4de8a0" text-anchor="middle" letter-spacing="1">OWASP TOP 10</text>
+
+  <rect x="380" y="164" width="126" height="22" rx="3" fill="#c88c0022" stroke="#c88c0070" stroke-width="1"/>
+  <text x="443" y="180" font-family="monospace" font-size="9" fill="#ffc14d" text-anchor="middle" letter-spacing="1">THREAT MODELING</text>
+
+  <rect x="514" y="164" width="118" height="22" rx="3" fill="#dc354522" stroke="#dc354570" stroke-width="1"/>
+  <text x="573" y="180" font-family="monospace" font-size="9" fill="#ff7070" text-anchor="middle" letter-spacing="1">BURP SUITE PRO</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="204" x2="648" y2="204" stroke="#0E5484" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Stats section label -->
+  <text x="32" y="224" font-family="monospace" font-size="9" fill="#0E5484" letter-spacing="3">&gt; SECURITY_STATS.JSON</text>
+
+  <!-- Stat cards -->
+  <rect x="32" y="232" width="144" height="64" rx="6" fill="#0E548412" stroke="#0E548450" stroke-width="1"/>
+  <line x1="32" y1="234" x2="176" y2="234" stroke="#0E5484" stroke-width="2"/>
+  <text x="104" y="264" font-family="monospace" font-size="26" font-weight="700" fill="#5ab4f0" text-anchor="middle">15+</text>
+  <text x="104" y="286" font-family="monospace" font-size="8" fill="#3a6a8a" text-anchor="middle" letter-spacing="1">VALID FINDINGS</text>
+
+  <rect x="184" y="232" width="144" height="64" rx="6" fill="#0E548412" stroke="#0E548450" stroke-width="1"/>
+  <line x1="184" y1="234" x2="328" y2="234" stroke="#0E5484" stroke-width="2"/>
+  <text x="256" y="264" font-family="monospace" font-size="26" font-weight="700" fill="#5ab4f0" text-anchor="middle">95%</text>
+  <text x="256" y="286" font-family="monospace" font-size="8" fill="#3a6a8a" text-anchor="middle" letter-spacing="1">REMEDIATION RATE</text>
+
+  <rect x="336" y="232" width="144" height="64" rx="6" fill="#0E548412" stroke="#0E548450" stroke-width="1"/>
+  <line x1="336" y1="234" x2="480" y2="234" stroke="#0E5484" stroke-width="2"/>
+  <text x="408" y="264" font-family="monospace" font-size="26" font-weight="700" fill="#5ab4f0" text-anchor="middle">40%</text>
+  <text x="408" y="286" font-family="monospace" font-size="8" fill="#3a6a8a" text-anchor="middle" letter-spacing="1">SECURITY DEBT CUT</text>
+
+  <rect x="488" y="232" width="160" height="64" rx="6" fill="#0E548412" stroke="#0E548450" stroke-width="1"/>
+  <line x1="488" y1="234" x2="648" y2="234" stroke="#0E5484" stroke-width="2"/>
+  <text x="568" y="264" font-family="monospace" font-size="26" font-weight="700" fill="#5ab4f0" text-anchor="middle">30%</text>
+  <text x="568" y="286" font-family="monospace" font-size="8" fill="#3a6a8a" text-anchor="middle" letter-spacing="1">VULN RECURRENCE ↓</text>
+
+  <!-- Skills panel -->
+  <rect x="32" y="316" width="290" height="200" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="48" y="336" font-family="monospace" font-size="9" fill="#0E5484" letter-spacing="2">&gt; SKILL_PROFICIENCY.SH</text>
+
+  <!-- skill bars -->
+  <text x="48" y="358" font-family="monospace" font-size="11" fill="#8aafc8">Web VAPT</text>
+  <text x="298" y="358" font-family="monospace" font-size="11" fill="#0E5484" text-anchor="end">92%</text>
+  <rect x="48" y="362" width="234" height="3" rx="1" fill="#0E548420"/>
+  <rect x="48" y="362" width="215" height="3" rx="1" fill="#0E5484"/>
+
+  <text x="48" y="384" font-family="monospace" font-size="11" fill="#8aafc8">API Pentesting</text>
+  <text x="298" y="384" font-family="monospace" font-size="11" fill="#0E5484" text-anchor="end">88%</text>
+  <rect x="48" y="388" width="234" height="3" rx="1" fill="#0E548420"/>
+  <rect x="48" y="388" width="206" height="3" rx="1" fill="#0E5484"/>
+
+  <text x="48" y="410" font-family="monospace" font-size="11" fill="#8aafc8">Burp Suite Pro</text>
+  <text x="298" y="410" font-family="monospace" font-size="11" fill="#0E5484" text-anchor="end">85%</text>
+  <rect x="48" y="414" width="234" height="3" rx="1" fill="#0E548420"/>
+  <rect x="48" y="414" width="199" height="3" rx="1" fill="#0E5484"/>
+
+  <text x="48" y="436" font-family="monospace" font-size="11" fill="#8aafc8">Python / Scripting</text>
+  <text x="298" y="436" font-family="monospace" font-size="11" fill="#0E5484" text-anchor="end">78%</text>
+  <rect x="48" y="440" width="234" height="3" rx="1" fill="#0E548420"/>
+  <rect x="48" y="440" width="182" height="3" rx="1" fill="#0E5484"/>
+
+  <text x="48" y="462" font-family="monospace" font-size="11" fill="#8aafc8">DevSecOps / CI-CD</text>
+  <text x="298" y="462" font-family="monospace" font-size="11" fill="#0E5484" text-anchor="end">75%</text>
+  <rect x="48" y="466" width="234" height="3" rx="1" fill="#0E548420"/>
+  <rect x="48" y="466" width="176" height="3" rx="1" fill="#0E5484"/>
+
+  <text x="48" y="488" font-family="monospace" font-size="11" fill="#8aafc8">Android Security</text>
+  <text x="298" y="488" font-family="monospace" font-size="11" fill="#0E5484" text-anchor="end">70%</text>
+  <rect x="48" y="492" width="234" height="3" rx="1" fill="#0E548420"/>
+  <rect x="48" y="492" width="164" height="3" rx="1" fill="#0E5484"/>
+
+  <!-- Findings panel -->
+  <rect x="334" y="316" width="314" height="200" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="350" y="336" font-family="monospace" font-size="9" fill="#0E5484" letter-spacing="2">&gt; RECENT_FINDINGS.LOG</text>
+
+  <circle cx="354" cy="356" r="5" fill="#ff4444"/>
+  <text x="366" y="361" font-family="monospace" font-size="11" fill="#8aafc8">WAF Bypass — Meesho/Valmo</text>
+  <text x="626" y="361" font-family="monospace" font-size="10" fill="#4de8a0" text-anchor="end">✓ ACK</text>
+
+  <circle cx="354" cy="381" r="5" fill="#ff8c00"/>
+  <text x="366" y="386" font-family="monospace" font-size="11" fill="#8aafc8">IDOR — Auth flaw</text>
+  <text x="626" y="386" font-family="monospace" font-size="10" fill="#4a6a80" text-anchor="end">H1</text>
+
+  <circle cx="354" cy="406" r="5" fill="#ff8c00"/>
+  <text x="366" y="411" font-family="monospace" font-size="11" fill="#8aafc8">JWT Misconfig</text>
+  <text x="626" y="411" font-family="monospace" font-size="10" fill="#4a6a80" text-anchor="end">Intigriti</text>
+
+  <circle cx="354" cy="431" r="5" fill="#ff8c00"/>
+  <text x="366" y="436" font-family="monospace" font-size="11" fill="#8aafc8">Broken Access Control</text>
+  <text x="626" y="436" font-family="monospace" font-size="10" fill="#4a6a80" text-anchor="end">Bugcrowd</text>
+
+  <circle cx="354" cy="456" r="5" fill="#ffc000"/>
+  <text x="366" y="461" font-family="monospace" font-size="11" fill="#8aafc8">SSRF — API endpoint</text>
+  <text x="626" y="461" font-family="monospace" font-size="10" fill="#4a6a80" text-anchor="end">Intigriti</text>
+
+  <circle cx="354" cy="481" r="5" fill="#ffc000"/>
+  <text x="366" y="486" font-family="monospace" font-size="11" fill="#8aafc8">SQLi — REST API</text>
+  <text x="626" y="486" font-family="monospace" font-size="10" fill="#4a6a80" text-anchor="end">Bugcrowd</text>
+
+  <circle cx="354" cy="506" r="5" fill="#0E5484"/>
+  <text x="366" y="511" font-family="monospace" font-size="11" fill="#8aafc8">Business Logic Flaw</text>
+  <text x="626" y="511" font-family="monospace" font-size="10" fill="#4a6a80" text-anchor="end">H1</text>
+
+  <!-- Terminal -->
+  <rect x="32" y="534" width="616" height="158" rx="6" fill="#040a10" stroke="#0E548440" stroke-width="1"/>
+  <circle cx="52" cy="552" r="5" fill="#ff5f56"/>
+  <circle cx="70" cy="552" r="5" fill="#ffbd2e"/>
+  <circle cx="88" cy="552" r="5" fill="#27c93f"/>
+
+  <text x="48" y="576" font-family="monospace" font-size="11" fill="#0E5484">shadex@kali</text>
+  <text x="122" y="576" font-family="monospace" font-size="11" fill="#3a6a8a">:~$</text>
+  <text x="148" y="576" font-family="monospace" font-size="11" fill="#e8f4ff">whoami --security</text>
+
+  <text x="48" y="596" font-family="monospace" font-size="11" fill="#4de8a0">→ AppSec Engineer @ ElevanceSkills + AI4See</text>
+
+  <text x="48" y="616" font-family="monospace" font-size="11" fill="#0E5484">shadex@kali</text>
+  <text x="122" y="616" font-family="monospace" font-size="11" fill="#3a6a8a">:~$</text>
+  <text x="148" y="616" font-family="monospace" font-size="11" fill="#e8f4ff">cat current_focus.txt</text>
+
+  <text x="48" y="636" font-family="monospace" font-size="11" fill="#ffc14d">→ Web VAPT · Android APK Analysis · SOC · Bug Bounty</text>
+
+  <text x="48" y="656" font-family="monospace" font-size="11" fill="#0E5484">shadex@kali</text>
+  <text x="122" y="656" font-family="monospace" font-size="11" fill="#3a6a8a">:~$</text>
+  <text x="148" y="656" font-family="monospace" font-size="11" fill="#e8f4ff">nmap --highlight meesho/valmo</text>
+
+  <text x="48" y="676" font-family="monospace" font-size="11" fill="#4de8a0">→ [ACKNOWLEDGED] WAF bypass on staging.valmo.in</text>
+
+  <!-- Platforms label -->
+  <text x="32" y="716" font-family="monospace" font-size="9" fill="#0E5484" letter-spacing="3">&gt; BOUNTY_PLATFORMS.CONF</text>
+
+  <!-- Platform cards -->
+  <rect x="32" y="724" width="194" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="129" y="750" font-family="monospace" font-size="12" font-weight="700" fill="#5ab4f0" text-anchor="middle">HACKERONE</text>
+  <text x="129" y="768" font-family="monospace" font-size="10" fill="#3a6a8a" text-anchor="middle">Meesho · DoorDash</text>
+  <text x="129" y="784" font-family="monospace" font-size="10" fill="#3a6a8a" text-anchor="middle">Platacard</text>
+
+  <rect x="234" y="724" width="194" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="331" y="750" font-family="monospace" font-size="12" font-weight="700" fill="#5ab4f0" text-anchor="middle">BUGCROWD</text>
+  <text x="331" y="768" font-family="monospace" font-size="10" fill="#3a6a8a" text-anchor="middle">Auth &amp; Access Control</text>
+  <text x="331" y="784" font-family="monospace" font-size="10" fill="#3a6a8a" text-anchor="middle">Jun 2025 – Present</text>
+
+  <rect x="436" y="724" width="212" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="542" y="750" font-family="monospace" font-size="12" font-weight="700" fill="#5ab4f0" text-anchor="middle">INTIGRITI</text>
+  <text x="542" y="768" font-family="monospace" font-size="10" fill="#3a6a8a" text-anchor="middle">JWT · SSRF · AuthZ</text>
+  <text x="542" y="784" font-family="monospace" font-size="10" fill="#3a6a8a" text-anchor="middle">Nov 2025 – Present</text>
+
+  <!-- Repos label -->
+  <text x="32" y="820" font-family="monospace" font-size="9" fill="#0E5484" letter-spacing="3">&gt; REPOSITORIES.LS</text>
+
+  <!-- Repo cards -->
+  <rect x="32" y="828" width="302" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="48" y="850" font-family="monospace" font-size="11" font-weight="700" fill="#5ab4f0">365DaysOfApplicationSecurity</text>
+  <text x="48" y="868" font-family="monospace" font-size="10" fill="#3a6a8a">Day-by-day AppSec roadmap</text>
+  <text x="48" y="884" font-family="monospace" font-size="10" fill="#3a6a8a">200+ free resources · 7 phases</text>
+
+  <rect x="342" y="828" width="306" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="358" y="850" font-family="monospace" font-size="11" font-weight="700" fill="#5ab4f0">threat-modeling-notes</text>
+  <text x="358" y="868" font-family="monospace" font-size="10" fill="#3a6a8a">STRIDE framework · Templates</text>
+  <text x="358" y="884" font-family="monospace" font-size="10" fill="#3a6a8a">Worked examples · Checklists</text>
+
+  <rect x="32" y="908" width="302" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="48" y="930" font-family="monospace" font-size="11" font-weight="700" fill="#5ab4f0">bug-bounty-recon-scripts</text>
+  <text x="48" y="948" font-family="monospace" font-size="10" fill="#3a6a8a">Subdomain enum · JS analysis</text>
+  <text x="48" y="964" font-family="monospace" font-size="10" fill="#3a6a8a">API discovery · IDOR finder</text>
+
+  <rect x="342" y="908" width="306" height="72" rx="6" fill="#04080e" stroke="#0E548440" stroke-width="1"/>
+  <text x="358" y="930" font-family="monospace" font-size="11" font-weight="700" fill="#5ab4f0">secure-pipeline</text>
+  <text x="358" y="948" font-family="monospace" font-size="10" fill="#3a6a8a">GitHub Actions · SAST/DAST</text>
+  <text x="358" y="964" font-family="monospace" font-size="10" fill="#3a6a8a">Least-privilege · Secrets mgmt</text>
+
+  <!-- Vuln classes label -->
+  <text x="32" y="1004" font-family="monospace" font-size="9" fill="#0E5484" letter-spacing="3">&gt; VULN_CLASSES_TESTED.TXT</text>
+
+  <!-- Vuln tags row 1 -->
+  <rect x="32" y="1012" width="54" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="59" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">IDOR</text>
+
+  <rect x="94" y="1012" width="50" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="119" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">SQLi</text>
+
+  <rect x="152" y="1012" width="44" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="174" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">XSS</text>
+
+  <rect x="204" y="1012" width="52" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="230" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">CSRF</text>
+
+  <rect x="264" y="1012" width="52" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="290" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">SSRF</text>
+
+  <rect x="324" y="1012" width="118" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="383" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">JWT_MISCONFIG</text>
+
+  <rect x="450" y="1012" width="116" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="508" y="1026" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">BROKEN_AUTH</text>
+
+  <!-- Vuln tags row 2 -->
+  <rect x="32" y="1040" width="86" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="75" y="1054" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">PRIV_ESC</text>
+
+  <rect x="126" y="1040" width="136" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="194" y="1054" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">BUSINESS_LOGIC</text>
+
+  <rect x="270" y="1040" width="108" height="20" rx="3" fill="#dc354515" stroke="#dc354560" stroke-width="1"/>
+  <text x="324" y="1054" font-family="monospace" font-size="9" fill="#ff7070" text-anchor="middle" letter-spacing="1">WAF_BYPASS</text>
+
+  <rect x="386" y="1040" width="44" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="408" y="1054" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">XXE</text>
+
+  <rect x="438" y="1040" width="44" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="460" y="1054" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">RCE</text>
+
+  <rect x="490" y="1040" width="124" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="552" y="1054" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">PATH_TRAVERSAL</text>
+
+  <!-- Vuln tags row 3 -->
+  <rect x="32" y="1068" width="134" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="99" y="1082" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">MASS_ASSIGNMENT</text>
+
+  <rect x="174" y="1068" width="116" height="20" rx="3" fill="#0E548415" stroke="#0E548450" stroke-width="1"/>
+  <text x="232" y="1082" font-family="monospace" font-size="9" fill="#5ab4f0" text-anchor="middle" letter-spacing="1">OPEN_REDIRECT</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="1108" x2="648" y2="1108" stroke="#0E5484" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Footer -->
+  <text x="340" y="1134" font-family="monospace" font-size="10" fill="#2a4a60" text-anchor="middle" letter-spacing="2">[ OPEN TO ]</text>
+  <text x="340" y="1154" font-family="monospace" font-size="10" fill="#0E5484" text-anchor="middle" letter-spacing="1">AppSec Engineer · Web/API Pentesting · DevSecOps · Bug Bounty Collab</text>
+
+  <!-- Bottom wave -->
+  <path d="M0 1180 Q170 1160 340 1180 Q510 1200 680 1180 L680 1400 L0 1400 Z" fill="#0E548410"/>
+  <path d="M0 1200 Q170 1180 340 1200 Q510 1220 680 1200" fill="none" stroke="#0E5484" stroke-width="1" opacity="0.3"/>
+
+</svg>
