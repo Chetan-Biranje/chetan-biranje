@@ -1,24 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0E5484,100:062e52&height=220&section=header&text=Chetan%20Biranje&fontSize=52&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Application%20Security%20Engineer%20%7C%20Bug%20Hunter%20%7C%20DevSecOps&descAlignY=58&descColor=a8d4f5&descSize=16"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:080c14,50:0E5484,100:062e52&height=200&section=header&text=Chetan%20Biranje&fontSize=50&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Application%20Security%20Engineer%20%7C%20Bug%20Hunter%20%7C%20DevSecOps&descAlignY=58&descColor=5ab4f0&descSize=15"/>
 
 </div>
-
-<div align="center">
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║  shadex@kali:~$ whoami                                       ║
-║  > AppSec Engineer · Bug Hunter · Threat Modeler             ║
-║  > Pune, Maharashtra, India                                  ║
-║  > BCA @ D.Y. Patil University (2025–2028)                   ║
-║  shadex@kali:~$ █                                            ║
-╚══════════════════════════════════════════════════════════════╝
-```
-
-</div>
-
----
 
 <div align="center">
 
@@ -31,9 +15,13 @@
 
 </div>
 
----
+<div align="center">
 
-## `$ cat about_me.txt`
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=1000&color=0E5484&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=60&lines=shadex%40kali%3A~%24+whoami+--security;→+AppSec+Engineer+%7C+Bug+Hunter+%7C+WAF+Bypass+ACK'd+by+Meesho)
+
+</div>
+
+---
 
 ```python
 class ChetanBiranje:
@@ -49,16 +37,17 @@ class ChetanBiranje:
     ]
 
     bug_bounty = {
-        "HackerOne" : ["Meesho/Valmo", "DoorDash", "Platacard"],
-        "Bugcrowd"  : ["Auth & access control focus"],
+        "HackerOne" : ["Meesho/Valmo ← WAF bypass ACKNOWLEDGED ✓", "DoorDash", "Platacard"],
+        "Bugcrowd"  : ["Auth & access control — Jun 2025–Present"],
         "Intigriti" : ["JWT misconfiguration, SSRF, authorization flaws"],
     }
 
-    highlight    = "WAF bypass on staging.valmo.in → acknowledged by Meesho Security Team"
-    valid_finds  = "15+"
-    remediation  = "95%"
-    security_debt_cut     = "40%"
-    vuln_recurrence_cut   = "30%"
+    stats = {
+        "valid_findings"     : "15+",
+        "remediation_rate"   : "95%",
+        "security_debt_cut"  : "40%",
+        "vuln_recurrence_cut": "30%",
+    }
 ```
 
 ---
@@ -78,14 +67,14 @@ class ChetanBiranje:
 ## `$ ./recon.sh --show highlights`
 
 ```
-[CRITICAL] WAF bypass — staging.valmo.in         → Meesho Security Team: ACKNOWLEDGED ✓
-[HIGH]     IDOR — broken object-level auth        → HackerOne: VALID ✓
-[HIGH]     JWT algorithm confusion                → Intigriti: VALID ✓
-[HIGH]     Broken access control                  → Bugcrowd: VALID ✓
-[HIGH]     Privilege escalation via IDOR          → HackerOne: VALID ✓
-[MEDIUM]   SSRF — internal API endpoint           → Intigriti: VALID ✓
-[MEDIUM]   SQL injection — REST API               → Bugcrowd: VALID ✓
-[MEDIUM]   Business logic flaw — checkout bypass  → HackerOne: VALID ✓
+[CRITICAL] WAF bypass — staging.valmo.in     → Meesho Security Team: ACKNOWLEDGED ✓
+[HIGH]     IDOR — broken object-level auth   → HackerOne: VALID ✓
+[HIGH]     JWT algorithm confusion            → Intigriti: VALID ✓
+[HIGH]     Broken access control             → Bugcrowd: VALID ✓
+[HIGH]     Privilege escalation via IDOR     → HackerOne: VALID ✓
+[MEDIUM]   SSRF — internal API endpoint      → Intigriti: VALID ✓
+[MEDIUM]   SQL injection — REST API          → Bugcrowd: VALID ✓
+[MEDIUM]   Business logic — checkout bypass  → HackerOne: VALID ✓
 ```
 
 ---
@@ -94,16 +83,16 @@ class ChetanBiranje:
 
 <div align="center">
 
-![IDOR](https://img.shields.io/badge/IDOR-critical-dc3545?style=flat-square)
+![IDOR](https://img.shields.io/badge/IDOR-critical-dc3545?style=flat-square&logo=target&logoColor=white)
 ![SQLi](https://img.shields.io/badge/SQLi-critical-dc3545?style=flat-square)
+![WAF Bypass](https://img.shields.io/badge/WAF_Bypass-critical-dc3545?style=flat-square)
 ![XSS](https://img.shields.io/badge/XSS-high-fd7e14?style=flat-square)
-![CSRF](https://img.shields.io/badge/CSRF-medium-ffc107?style=flat-square)
 ![SSRF](https://img.shields.io/badge/SSRF-high-fd7e14?style=flat-square)
 ![JWT Misconfig](https://img.shields.io/badge/JWT_Misconfig-high-fd7e14?style=flat-square)
-![Broken Auth](https://img.shields.io/badge/Broken_Auth-critical-dc3545?style=flat-square)
+![Broken Auth](https://img.shields.io/badge/Broken_Auth-high-fd7e14?style=flat-square)
 ![Priv Escalation](https://img.shields.io/badge/Priv_Escalation-high-fd7e14?style=flat-square)
 ![Business Logic](https://img.shields.io/badge/Business_Logic-high-fd7e14?style=flat-square)
-![WAF Bypass](https://img.shields.io/badge/WAF_Bypass-critical-dc3545?style=flat-square)
+![CSRF](https://img.shields.io/badge/CSRF-medium-ffc107?style=flat-square)
 ![XXE](https://img.shields.io/badge/XXE-high-fd7e14?style=flat-square)
 ![RCE](https://img.shields.io/badge/RCE-critical-dc3545?style=flat-square)
 ![Path Traversal](https://img.shields.io/badge/Path_Traversal-high-fd7e14?style=flat-square)
@@ -116,29 +105,20 @@ class ChetanBiranje:
 
 ## `$ cat toolchain.conf`
 
-**Security Testing**
-```
-Burp Suite Pro  ·  OWASP ZAP  ·  Nmap  ·  ffuf  ·  SQLmap
-Nikto  ·  Wireshark  ·  Metasploit  ·  Nuclei  ·  Subfinder
-JADX  ·  MobSF  ·  Frida  ·  Postman  ·  jwt_tool
-```
+<div align="center">
 
-**Recon & OSINT**
-```
-subfinder  ·  amass  ·  httpx  ·  waybackurls  ·  gau
-gf  ·  LinkFinder  ·  Shodan  ·  censys  ·  Google Dorks
-```
+| Security Testing | Recon & OSINT | DevSecOps | Programming |
+|---|---|---|---|
+| Burp Suite Pro | subfinder | GitHub Actions | Python |
+| OWASP ZAP | amass | Docker | JavaScript |
+| Nmap | httpx | Bandit / Semgrep | Node.js |
+| ffuf | waybackurls | CodeQL | Bash |
+| SQLmap | gau | detect-secrets | SQL |
+| Nikto | Shodan | Trivy | PowerShell |
+| JADX / MobSF / Frida | Nuclei | SAST / DAST | — |
+| Wireshark | jwt_tool | Gitleaks | — |
 
-**DevSecOps**
-```
-GitHub Actions  ·  Docker  ·  Bandit  ·  Semgrep  ·  CodeQL
-OWASP Dependency-Check  ·  detect-secrets  ·  Gitleaks  ·  Trivy
-```
-
-**Programming**
-```
-Python  ·  JavaScript  ·  Node.js  ·  Bash  ·  SQL  ·  PowerShell
-```
+</div>
 
 ---
 
@@ -154,6 +134,23 @@ Python  ·  JavaScript  ·  Node.js  ·  Bash  ·  SQL  ·  PowerShell
 | [⚙️ Secure CI/CD Pipeline](https://github.com/mr-Shadex/secure-pipeline) | GitHub Actions · SAST/DAST · Least-privilege | GitHub Actions |
 | [🔐 Secure REST API + RBAC](https://github.com/mr-Shadex/secure-rbac-api) | JWT auth · Role inheritance · Security headers | Node.js · MongoDB |
 | [🤖 API Security Toolkit](https://github.com/mr-Shadex/api-security-toolkit) | JWT analysis · IDOR detection · Fuzzing | Python |
+
+</div>
+
+---
+
+## `$ github-stats --user Chetan-Biranje`
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=Chetan-Biranje&show_icons=true&theme=dark&hide_border=true&bg_color=080c14&title_color=0E5484&icon_color=5ab4f0&text_color=8aafc8&count_private=true" height="165"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chetan-Biranje&layout=compact&theme=dark&hide_border=true&bg_color=080c14&title_color=0E5484&text_color=8aafc8" height="165"/>
+
+</div>
+
+<div align="center">
+
+![Streak](https://github-readme-streak-stats.herokuapp.com/?user=Chetan-Biranje&theme=dark&hide_border=true&background=080c14&ring=0E5484&fire=5ab4f0&currStreakLabel=0E5484&sideLabels=8aafc8&dates=4a6a80)
 
 </div>
 
@@ -176,36 +173,6 @@ Python  ·  JavaScript  ·  Node.js  ·  Bash  ·  SQL  ·  PowerShell
 
 ---
 
-## `$ cat frameworks.md`
-
-```
-OWASP Top 10                     — Web application security
-OWASP API Security Top 10        — API attack surface
-OWASP ASVS                       — Security verification standard
-STRIDE                           — Threat modeling framework
-CVSS v3.1                        — Vulnerability scoring
-Secure SDLC                      — Security in every SDLC phase
-```
-
----
-
-## `$ github-stats --user Chetan-Biranje`
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=Chetan-Biranje&show_icons=true&theme=dark&hide_border=true&bg_color=080c14&title_color=0E5484&icon_color=5ab4f0&text_color=8aafc8&count_private=true" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chetan-Biranje&layout=compact&theme=dark&hide_border=true&bg_color=080c14&title_color=0E5484&text_color=8aafc8" height="165"/>
-
-</div>
-
-<div align="center">
-
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=Chetan-Biranje&theme=dark&hide_border=true&background=080c14&ring=0E5484&fire=5ab4f0&currStreakLabel=0E5484&sideLabels=8aafc8&dates=4a6a80)
-
-</div>
-
----
-
 <div align="center">
 
 ```
@@ -217,10 +184,6 @@ Secure SDLC                      — Security in every SDLC phase
 ║  Bug Bounty Collaborations                                ║
 ╚═══════════════════════════════════════════════════════════╝
 ```
-
-</div>
-
-<div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:062e52,100:0E5484&height=100&section=footer"/>
 
