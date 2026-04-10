@@ -145,13 +145,6 @@ class ChetanBiranje:
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Chetan-Biranje&show_icons=true&theme=dark&hide_border=true&bg_color=080c14&title_color=0E5484&icon_color=5ab4f0&text_color=8aafc8&count_private=true" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chetan-Biranje&layout=compact&theme=dark&hide_border=true&bg_color=080c14&title_color=0E5484&text_color=8aafc8" height="165"/>
-
-</div>
-
-<div align="center">
-
 ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=Chetan-Biranje&theme=dark&hide_border=true&background=080c14&ring=0E5484&fire=5ab4f0&currStreakLabel=0E5484&sideLabels=8aafc8&dates=4a6a80)
 
 </div>
