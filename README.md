@@ -1,4 +1,6 @@
 <div align="center">
+  <img src="./chetan-profile-banner.svg" width="100%"/>
+</div>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:080c14,50:0E5484,100:062e52&height=200&section=header&text=Chetan%20Biranje&fontSize=50&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Application%20Security%20Engineer%20%7C%20Bug%20Hunter%20%7C%20DevSecOps&descAlignY=58&descColor=5ab4f0&descSize=15"/>
 
