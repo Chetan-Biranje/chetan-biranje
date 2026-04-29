@@ -10,7 +10,7 @@
 [![HackerOne](https://img.shields.io/badge/HackerOne-494649?style=for-the-badge&logo=hackerone&logoColor=white)](https://hackerone.com/chetanbiranje)
 [![Bugcrowd](https://img.shields.io/badge/Bugcrowd-F26822?style=for-the-badge&logo=bugcrowd&logoColor=white)](https://bugcrowd.com/chetanbiranje)
 [![Email](https://img.shields.io/badge/ProtonMail-8B89CC?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:chetanbiranje@proton.me)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=replit&logoColor=white)]([https://ChetanBiranje.replit.app](https://chetan-biranje.github.io/Chetan-biranje-portfolio/))
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=replit&logoColor=white)]((https://chetan-biranje.github.io/Chetan-biranje-portfolio/))
 
 </div>
 
