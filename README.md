@@ -124,13 +124,6 @@ Least-privilege gates blocking insecure builds
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=Chetan-Biranje&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=e11d48&icon_color=e11d48&text_color=94a3b8&count_private=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chetan-Biranje&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=e11d48&text_color=94a3b8" />
-
-</div>
-
-<div align="center">
-
 ![streak](https://github-readme-streak-stats.herokuapp.com?user=Chetan-Biranje&theme=github-dark-blue&hide_border=true&background=0d1117&ring=e11d48&fire=e11d48&currStreakLabel=94a3b8)
 
 </div>
