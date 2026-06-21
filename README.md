@@ -24,7 +24,7 @@
   > AppSec Researcher — Web/API/Android VAPT | OWASP Top 10
   > Bug Bounty Hunter — HackerOne · Bugcrowd · Intigriti
   > Acknowledged finding: WAF Bypass (Meesho Security Team)
-  > Currently: ElevanceSkills + AI4See | Pune, India
+  > Currently: Bug Bounty Hunter — HackerOne · Bugcrowd · Intigriti  | Pune, India
 
 └─$ cat /etc/skills
 
