@@ -120,16 +120,6 @@ Least-privilege gates blocking insecure builds
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![streak](https://github-readme-streak-stats.herokuapp.com?user=Chetan-Biranje&theme=github-dark-blue&hide_border=true&background=0d1117&ring=e11d48&fire=e11d48&currStreakLabel=94a3b8)
-
-</div>
-
----
-
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:e11d48,50:1a1f2e,100:0d1117&height=100&section=footer" />
