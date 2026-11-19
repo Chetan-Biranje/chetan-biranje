@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="150" viewBox="0 0 1000 150"><rect width="100%" height="100%" rx="20" fill="#F5F1E8"/>
-          <text x="35" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#242A30">Featured work</text>
-          <rect x="35" y="58" width="930" height="64" rx="12" fill="#EEE9DF"/>
-          <text x="58" y="85" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#242A30">Featured project 02</text>
-          <text x="58" y="105" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#77766F">Replace with your actual repository name and description</text>
-        </svg>
