@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Chetan Biranje | Application security</title>
+<meta name="description" content="Chetan Biranje. Application security, web and API VAPT, DevSecOps and security research. Pune, India.">
+<style>
+@font-face{font-family:"Instrument Serif";src:url(fonts/serif-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url(fonts/mono-400.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url(fonts/mono-500.woff) format("woff");font-weight:500;font-display:swap}
+:root{--bg:#070b14;--ink:#e6edf6;--muted:#8795aa;--line:#1e2a3e;--blue:#4c9aff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Geist Mono",ui-monospace,Consolas,monospace}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+main{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:0 28px}
+section{padding:72px 0}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:12px;letter-spacing:.25em;color:var(--muted);text-transform:uppercase;margin:0 0 14px}
+h1{font:400 clamp(56px,11vw,120px)/.95 "Instrument Serif",Georgia,serif;margin:0 0 28px}
+h1 span{color:var(--blue)}
+.lead{max-width:34ch;margin:0 0 8px}
+.meta{color:var(--muted);font-size:13px;margin:0 0 28px}
+.status{display:flex;align-items:center;gap:10px;font-size:13px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--blue);animation:p 2.2s ease-in-out infinite}
+@keyframes p{50%{opacity:.3}}
+h2{font:400 34px/1.1 "Instrument Serif",Georgia,serif;margin:0 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:6px 16px;border:1px solid rgba(76,154,255,.5);border-radius:999px;background:rgba(18,32,58,.7);font-size:13px}
+.repos{display:grid;gap:14px}
+.repo{display:block;padding:20px 24px;border:1px solid var(--line);border-radius:16px;background:rgba(11,17,28,.78);backdrop-filter:blur(6px);color:inherit;text-decoration:none;transition:border-color .2s,transform .2s}
+.repo:hover{border-color:var(--blue);transform:translateY(-2px)}
+.repo b{display:block;font:400 26px "Instrument Serif",Georgia,serif;margin-bottom:4px}
+.repo small{color:var(--muted);font-size:12px}
+.links{display:flex;flex-wrap:wrap;gap:22px}
+a{color:var(--blue)}
+footer{padding:40px 0 60px;color:var(--muted);font-size:12px}
+@media (prefers-reduced-motion:reduce){.status i{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<main>
+  <section class="hero">
+    <p class="eyebrow">Hello, world / Profile</p>
+    <h1>Chetan<br><span>Biranje</span></h1>
+    <p class="lead">Application security. Web and API VAPT. DevSecOps and security research.</p>
+    <p class="meta">Pune, India</p>
+    <div class="status"><i></i>Full-stack dev, security-focused, at AI4See</div>
+  </section>
+
+  <section>
+    <h2>Focus areas</h2>
+    <div class="chips">
+      <span>Web application VAPT</span><span>REST API security</span><span>DevSecOps</span>
+      <span>Offensive security</span><span>Security research</span><span>SOC</span><span>Bug bounty</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="repos">
+      <a class="repo" href="https://github.com/Chetan-Biranje/webapp-pentest-framework"><b>webapp-pentest-framework</b><small>Web application penetration testing framework and tools</small></a>
+      <a class="repo" href="https://github.com/Chetan-Biranje/web-rest-api-pentest-research"><b>web-rest-api-pentest-research</b><small>Web and REST API pentest research and techniques</small></a>
+      <a class="repo" href="https://github.com/Chetan-Biranje/offensive-security-skill-development"><b>offensive-security-skill-development</b><small>Offensive security training materials and hands-on labs</small></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Find me</h2>
+    <div class="links">
+      <a href="https://github.com/Chetan-Biranje">GitHub</a>
+      <a href="https://www.linkedin.com/in/chetanbiranje">LinkedIn</a>
+      <a href="https://medium.com/@Chetan_Biranje">Medium</a>
+      <a href="https://chetanbiranje.vercel.app">Portfolio</a>
+      <a href="mailto:chetanbiranje@proton.me">Email</a>
+    </div>
+  </section>
+  <footer>Chetan Biranje</footer>
+</main>
+<script src="assets/hero3d.js"></script>
+</body>
+</html>
