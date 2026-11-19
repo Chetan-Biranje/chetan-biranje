@@ -350,9 +350,9 @@ def activity(d):
 
 
 REPOS = [
-    ("webapp-pentest-framework", "Web application penetration testing framework and tools"),
-    ("web-rest-api-pentest-research", "Web and REST API pentest research and techniques"),
-    ("offensive-security-skill-development", "Offensive security training materials and hands-on labs"),
+    ("API-Authorization-Matrix-Automated-BOLA-BFLA-Detection", "Scanner that finds BOLA and BFLA from a role matrix. Tests and CI included"),
+    ("insider-threat-investigation-lab", "DFIR timeline from USB, browser and file activity exports. Synthetic data"),
+    ("webapp-pentest-framework", "Web application penetration testing methodology, templates and tools"),
 ]
 
 
