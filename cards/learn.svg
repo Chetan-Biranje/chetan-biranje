@@ -27,14 +27,14 @@
  .cf{display:none}
  .rm{display:inline}
 }
-</style><clipPath id="c"><rect x="2" y="2" width="316" height="166" rx="18"/></clipPath></defs><rect x="1" y="1" width="318" height="170" rx="20" fill="#F5F1E8" stroke="#D8D1C4"/>
+</style><clipPath id="c"><rect x="2" y="2" width="316" height="166" rx="18"/></clipPath></defs><rect x="1" y="1" width="318" height="170" rx="20" fill="#0B111C"/>
 <g class="tile" style="animation-delay:0.70s">
-<rect x="2" y="2" width="316" height="166" rx="18" fill="#F5F1E8" stroke="#D7A92E" stroke-width="2"/>
-<text x="24" y="38" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" letter-spacing="2" fill="#77766F">LEARN</text>
-<circle cx="286" cy="38" r="6" fill="#D7A92E"/><circle class="ring" cx="286" cy="38" r="14" fill="none" stroke="#D7A92E" stroke-width="2" style="animation-delay:1.6s"/>
-<text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#242A30" opacity="0">1<set attributeName="opacity" to="1" begin="1.200s" dur="0.045s" fill="remove"/></text><text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#242A30" opacity="0">2<set attributeName="opacity" to="1" begin="1.245s" dur="0.045s" fill="remove"/></text><text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#242A30" opacity="0">3<set attributeName="opacity" to="1" begin="1.290s" dur="0.045s" fill="remove"/></text><text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#242A30" opacity="0">4<set attributeName="opacity" to="1" begin="1.335s" dur="0.045s" fill="freeze"/></text><text class="rm" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#242A30">4</text>
-<text x="64" y="112" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="13" fill="#77766F">courses</text>
-<text x="25" y="140" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" fill="#242A30">Certifications</text>
-<text x="25" y="157" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="11" fill="#77766F">AppSec, DevSecOps, SOC</text>
-<text x="284" y="152" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="20" fill="#D7A92E" class="nudge">&#8599;</text>
-<g clip-path="url(#c)"><rect class="shine" x="0" y="0" width="90" height="170" fill="#fff" opacity=".35" transform="skewX(-18)" style="animation-delay:4.6s"/></g></g></svg>
+<rect x="2" y="2" width="316" height="166" rx="18" fill="#0B111C" stroke="#E3B341" stroke-width="2"/>
+<text x="24" y="38" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" letter-spacing="2" fill="#8795AA">LEARN</text>
+<circle cx="286" cy="38" r="6" fill="#E3B341"/><circle class="ring" cx="286" cy="38" r="14" fill="none" stroke="#E3B341" stroke-width="2" style="animation-delay:1.6s"/>
+<text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#E6EDF6" opacity="0">1<set attributeName="opacity" to="1" begin="1.200s" dur="0.045s" fill="remove"/></text><text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#E6EDF6" opacity="0">2<set attributeName="opacity" to="1" begin="1.245s" dur="0.045s" fill="remove"/></text><text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#E6EDF6" opacity="0">3<set attributeName="opacity" to="1" begin="1.290s" dur="0.045s" fill="remove"/></text><text class="cf" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#E6EDF6" opacity="0">4<set attributeName="opacity" to="1" begin="1.335s" dur="0.045s" fill="freeze"/></text><text class="rm" x="24" y="112" font-family="'Instrument Serif', Georgia, serif" font-size="72" fill="#E6EDF6">4</text>
+<text x="64" y="112" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="13" fill="#8795AA">courses</text>
+<text x="25" y="140" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" fill="#E6EDF6">Certifications</text>
+<text x="25" y="157" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="11" fill="#8795AA">AppSec, DevSecOps, SOC</text>
+<text x="284" y="152" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="20" fill="#E3B341" class="nudge">&#8599;</text>
+<g clip-path="url(#c)"><rect class="shine" x="0" y="0" width="90" height="170" fill="#fff" opacity=".10" transform="skewX(-18)" style="animation-delay:4.6s"/></g></g><rect x="1" y="1" width="318" height="170" rx="20" fill="none" stroke="#1E2A3E"/></svg>

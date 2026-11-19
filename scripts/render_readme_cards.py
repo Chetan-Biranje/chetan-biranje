@@ -16,10 +16,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 STATIC = os.getenv("STATIC", "0") == "1"
-PAPER, INK, MUTED, LINE = "#F5F1E8", "#242A30", "#77766F", "#D8D1C4"
-BLUE, RED, YELLOW = "#245B9B", "#B94B43", "#D7A92E"
-BAR_IDLE = "#B8B1A5"
-GRAPH = ["#E6E0D5", "#C7D7E8", "#8EAFD1", "#4F83B6", BLUE]
+PAPER, INK, MUTED, LINE = "#0B111C", "#E6EDF6", "#8795AA", "#1E2A3E"
+BLUE, RED, YELLOW = "#4C9AFF", "#F0746B", "#E3B341"
+BAR_IDLE = "#2B384D"
+GRAPH = ["#151F30", "#1B3A66", "#2563B0", "#3D8BEB", "#8CC4FF"]
 SERIF = "'Instrument Serif', Georgia, serif"
 MONO = "'Geist Mono', 'SFMono-Regular', Consolas, monospace"
 
@@ -73,12 +73,15 @@ ANIM = """
 """
 
 
-def save(name, body, w, h, defs=""):
+def save(name, body, w, h, defs="", under=""):
     style = f"<style>{FONTS}{'' if STATIC else ANIM}</style>"
+    clip = f'<clipPath id="card"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20"/></clipPath>' if under else ""
+    layer = f'<g clip-path="url(#card)">{under}</g>' if under else ""
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">'
-           f'<defs>{style}{defs}</defs>'
-           f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20" fill="{PAPER}" stroke="{LINE}"/>'
-           f'{body}</svg>')
+           f'<defs>{style}{defs}{clip}</defs>'
+           f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20" fill="{PAPER}"/>{layer}'
+           f'{body}'
+           f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="20" fill="none" stroke="{LINE}"/></svg>')
     (ROOT / "cards").mkdir(exist_ok=True)
     (ROOT / "cards" / name).write_text(svg, encoding="utf-8")
 
@@ -96,34 +99,161 @@ def load():
         return {}
 
 
+def sphere_frames(cx, cy, r, n_nodes=34, frames=36, tilt=0.38):
+    """Real 3D: nodes on a Fibonacci sphere, linked to their nearest neighbours, rotated about Y
+    and projected with perspective. Returns per-frame screen coords and depth for SMIL playback."""
+    import math
+    ga = math.pi * (3 - math.sqrt(5))
+    pts = []
+    for i in range(n_nodes):
+        y = 1 - 2 * (i + .5) / n_nodes
+        rr = math.sqrt(1 - y * y)
+        pts.append((math.cos(ga * i) * rr, y, math.sin(ga * i) * rr))
+    edges = set()
+    for i, a in enumerate(pts):
+        near = sorted(range(n_nodes), key=lambda j: sum((a[k] - pts[j][k]) ** 2 for k in range(3)))[1:4]
+        for j in near:
+            edges.add((min(i, j), max(i, j)))
+    edges = sorted(edges)
+    ct, st = math.cos(tilt), math.sin(tilt)
+    cam = 3.2
+
+    def project(p, th):
+        x, y, z = p
+        x, z = x * math.cos(th) + z * math.sin(th), -x * math.sin(th) + z * math.cos(th)
+        y, z = y * ct - z * st, y * st + z * ct
+        k = cam / (cam - z)
+        return cx + x * r * k, cy + y * r * k, z
+
+    out = []
+    for f in range(frames + 1):
+        th = 2 * math.pi * f / frames
+        out.append([project(p, th) for p in pts])
+    return edges, out
+
+
+def vals(items):
+    return ";".join(items)
+
+
 def hero():
     rows = (ROOT / "assets" / "portrait.txt").read_text().rstrip("\n").split("\n")
     fs, lh = 5.6, 5.9
     pw = 76 * fs * 0.6
-    px, py = 1000 - 48 - pw, 40
+    W, H = 1000, 420
+    px = W - 48 - pw
+    py = (H - len(rows) * lh) / 2 + 6
     art = []
     for i, line in enumerate(rows):
         art.append(f'<text xml:space="preserve" x="{px:.1f}" y="{py + i * lh:.1f}"'
-                   f'{cls("row", 0.2 + i * 0.018)} font-family="{MONO}" font-size="{fs}" fill="{INK}">{esc(line)}</text>')
-    h = int(py + len(rows) * lh + 24)
-    shine = "" if STATIC else (
-        f'<linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="{INK}"/>'
-        f'<stop offset=".42" stop-color="{INK}"/><stop offset=".5" stop-color="{BLUE}"/>'
-        f'<stop offset=".58" stop-color="{INK}"/><stop offset="1" stop-color="{INK}"/>'
-        f'<animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" '
-        f'dur="6s" begin="2s" repeatCount="indefinite"/></linearGradient>')
+                   f'{cls("row", 0.2 + i * 0.018)} font-family="{MONO}" font-size="{fs}" fill="#A9C8F5">{esc(line)}</text>')
+
+    scx, scy, sr = 792, 200, 158
+    hz = 262                       # horizon of the perspective floor
+    F = H - hz                     # nearest floor line lands on the bottom edge
+
+    # perspective floor: static radial lines + horizontal lines gliding toward the viewer
+    floor = []
+    for k in range(-14, 15):
+        floor.append(f'<line x1="{W/2}" y1="{hz}" x2="{W/2 + k * 150}" y2="{H + 40}" stroke="{BLUE}" stroke-opacity=".28" stroke-width="1"/>')
+    n_lines, steps = 9, 12
+    for k in range(n_lines):
+        ds = [k + 1 - t / steps for t in range(steps + 1)]
+        ys = [hz + F / max(d, 0.35) for d in ds]
+        ops = [max(0.0, min(.55, .62 - (d - 1) * .07)) * (1 if k else min(1, (d - .35) / .65)) for d in ds]
+        if k == n_lines - 1:   # newest far line fades in
+            ops = [o * (t / steps) for t, o in enumerate(ops)]
+        rect = f'<rect x="0" y="{ys[0]:.1f}" width="{W}" height="1.2" fill="{BLUE}" fill-opacity="{ops[0]:.2f}"'
+        if STATIC:
+            floor.append(rect + "/>")
+        else:
+            floor.append(
+                rect + ">"
+                f'<animate attributeName="y" dur="5s" repeatCount="indefinite" values="{vals(f"{v:.1f}" for v in ys)}"/>'
+                f'<animate attributeName="fill-opacity" dur="5s" repeatCount="indefinite" values="{vals(f"{v:.2f}" for v in ops)}"/>'
+                f'</rect>')
+
+    # rotating 3D network sphere
+    edges, fr = sphere_frames(scx, scy, sr)
+    nf = range(len(fr))
+    net = []
+    for (i, j) in edges:
+        def seg(f):
+            a, b = fr[f][i], fr[f][j]
+            return f'M{a[0]:.0f} {a[1]:.0f}L{b[0]:.0f} {b[1]:.0f}'
+
+        def op(f):
+            z = (fr[f][i][2] + fr[f][j][2]) / 2
+            return .06 + .34 * (z + 1) / 2
+        head = f'<path d="{seg(0)}" stroke="{BLUE}" stroke-opacity="{op(0):.2f}" stroke-width="1" fill="none"'
+        if STATIC:
+            net.append(head + "/>")
+        else:
+            net.append(
+                head + ">"
+                f'<animate attributeName="d" dur="48s" repeatCount="indefinite" values="{vals(seg(f) for f in nf)}"/>'
+                f'<animate attributeName="stroke-opacity" dur="48s" repeatCount="indefinite" values="{vals(f"{op(f):.2f}" for f in nf)}"/>'
+                f'</path>')
+    for i in range(len(fr[0])):
+        def rad(f):
+            return 1.2 + 2.2 * (fr[f][i][2] + 1) / 2
+
+        def nop(f):
+            return .25 + .75 * (fr[f][i][2] + 1) / 2
+        a = fr[0][i]
+        head = f'<circle cx="{a[0]:.0f}" cy="{a[1]:.0f}" r="{rad(0):.1f}" fill="#9CCBFF" fill-opacity="{nop(0):.2f}"'
+        if STATIC:
+            net.append(head + "/>")
+        else:
+            net.append(
+                head + ">"
+                f'<animate attributeName="cx" dur="48s" repeatCount="indefinite" values="{vals(f"{fr[f][i][0]:.0f}" for f in nf)}"/>'
+                f'<animate attributeName="cy" dur="48s" repeatCount="indefinite" values="{vals(f"{fr[f][i][1]:.0f}" for f in nf)}"/>'
+                f'<animate attributeName="r" dur="48s" repeatCount="indefinite" values="{vals(f"{rad(f):.1f}" for f in nf)}"/>'
+                f'<animate attributeName="fill-opacity" dur="48s" repeatCount="indefinite" values="{vals(f"{nop(f):.2f}" for f in nf)}"/>'
+                f'</circle>')
+
+    defs = (
+        '<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#070B14"/>'
+        '<stop offset=".62" stop-color="#0E1A2E"/><stop offset="1" stop-color="#0B111C"/></linearGradient>'
+        f'<radialGradient id="glow" cx="{scx}" cy="{scy}" r="300" gradientUnits="userSpaceOnUse">'
+        '<stop offset="0" stop-color="#2F6FD6" stop-opacity=".42"/><stop offset=".55" stop-color="#2F6FD6" stop-opacity=".10"/>'
+        '<stop offset="1" stop-color="#2F6FD6" stop-opacity="0"/></radialGradient>'
+        f'<linearGradient id="horizon" x1="0" y1="{hz}" x2="0" y2="{hz + 70}" gradientUnits="userSpaceOnUse">'
+        '<stop offset="0" stop-color="#0E1A2E"/><stop offset="1" stop-color="#0E1A2E" stop-opacity="0"/></linearGradient>'
+        f'<radialGradient id="fadeArt" cx="{px + pw / 2:.0f}" cy="{H / 2}" r="{pw * .62:.0f}" gradientUnits="userSpaceOnUse">'
+        '<stop offset=".55" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>'
+        f'<mask id="artmask"><rect width="{W}" height="{H}" fill="url(#fadeArt)"/></mask>'
+        '<linearGradient id="textfade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#070B14" stop-opacity=".85"/>'
+        '<stop offset=".5" stop-color="#070B14" stop-opacity=".35"/><stop offset="1" stop-color="#070B14" stop-opacity="0"/></linearGradient>')
+    if not STATIC:
+        defs += (f'<linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="{INK}"/>'
+                 f'<stop offset=".42" stop-color="{INK}"/><stop offset=".5" stop-color="{BLUE}"/>'
+                 f'<stop offset=".58" stop-color="{INK}"/><stop offset="1" stop-color="{INK}"/>'
+                 f'<animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" '
+                 f'dur="6s" begin="2s" repeatCount="indefinite"/></linearGradient>')
     last = "url(#g)" if not STATIC else INK
+
+    under = (
+        f'<rect width="{W}" height="{H}" fill="url(#sky)"/>'
+        f'<rect width="{W}" height="{H}" fill="url(#glow)"/>'
+        f'{"".join(floor)}'
+        f'<rect x="0" y="{hz}" width="{W}" height="70" fill="url(#horizon)"/>'
+        f'<line x1="0" y1="{hz}" x2="{W}" y2="{hz}" stroke="{BLUE}" stroke-opacity=".35"/>'
+        f'{"".join(net)}'
+        f'<rect width="640" height="{H}" fill="url(#textfade)"/>')
+
     body = f'''
-<text x="48" y="58" fill="{MUTED}" font-family="{MONO}" font-size="12" letter-spacing="3"{cls("rise", 0)}>HELLO, WORLD / PROFILE</text>
-<text x="48" y="140" fill="{INK}" font-family="{SERIF}" font-size="76"{cls("rise", .15)}>Chetan</text>
-<text x="48" y="214" fill="{last}" font-family="{SERIF}" font-size="76"{cls("rise", .3)}>Biranje</text>
-<text x="50" y="262" fill="{INK}" font-family="{MONO}" font-size="14"{cls("rise", .5)}>Application security. Web and API VAPT.</text>
-<text x="50" y="284" fill="{INK}" font-family="{MONO}" font-size="14"{cls("rise", .6)}>DevSecOps and security research.</text>
-<text x="50" y="316" fill="{MUTED}" font-family="{MONO}" font-size="12"{cls("rise", .7)}>Pune, India</text>
-<circle cx="56" cy="{h-46}" r="4" fill="{BLUE}"{'' if STATIC else ' class="dot"'}/>
-<text x="70" y="{h-42}" fill="{INK}" font-family="{MONO}" font-size="12"{cls("rise", .8)}>Full-stack dev, security-focused, at AI4See</text>
-{''.join(art)}'''
-    save("hero.svg", body, 1000, h, shine)
+<text x="48" y="64" fill="{MUTED}" font-family="{MONO}" font-size="12" letter-spacing="3"{cls("rise", 0)}>HELLO, WORLD / PROFILE</text>
+<text x="48" y="146" fill="{INK}" font-family="{SERIF}" font-size="76"{cls("rise", .15)}>Chetan</text>
+<text x="48" y="220" fill="{last}" font-family="{SERIF}" font-size="76"{cls("rise", .3)}>Biranje</text>
+<text x="50" y="270" fill="{INK}" font-family="{MONO}" font-size="14"{cls("rise", .5)}>Application security. Web and API VAPT.</text>
+<text x="50" y="292" fill="{INK}" font-family="{MONO}" font-size="14"{cls("rise", .6)}>DevSecOps and security research.</text>
+<text x="50" y="324" fill="{MUTED}" font-family="{MONO}" font-size="12"{cls("rise", .7)}>Pune, India</text>
+<circle cx="56" cy="{H - 46}" r="4" fill="{BLUE}"{'' if STATIC else ' class="dot"'}/>
+<text x="70" y="{H - 42}" fill="{INK}" font-family="{MONO}" font-size="12"{cls("rise", .8)}>Full-stack dev, security-focused, at AI4See</text>
+<g mask="url(#artmask)" opacity=".92">{''.join(art)}</g>'''
+    save("hero.svg", body, W, H, defs, under)
 
 
 def count_text(x, y, n, t0, color, size):
@@ -155,7 +285,7 @@ def tiles(d):
     for i, (fn, title, sub, color, n, unit, note) in enumerate(items):
         t = 0.2 + i * 0.25
         shine = "" if STATIC else (
-            f'<g clip-path="url(#c)"><rect class="shine" x="0" y="0" width="90" height="170" fill="#fff" opacity=".35" '
+            f'<g clip-path="url(#c)"><rect class="shine" x="0" y="0" width="90" height="170" fill="#fff" opacity=".10" '
             f'transform="skewX(-18)" style="animation-delay:{3 + i * .8}s"/></g>')
         defs = f'<clipPath id="c"><rect x="2" y="2" width="316" height="166" rx="18"/></clipPath>'
         ring = "" if STATIC else f'<circle class="ring" cx="286" cy="38" r="14" fill="none" stroke="{color}" stroke-width="2" style="animation-delay:{t + .9}s"/>'

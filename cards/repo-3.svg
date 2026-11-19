@@ -27,9 +27,9 @@
  .cf{display:none}
  .rm{display:inline}
 }
-</style></defs><rect x="1" y="1" width="998" height="90" rx="20" fill="#F5F1E8" stroke="#D8D1C4"/>
+</style></defs><rect x="1" y="1" width="998" height="90" rx="20" fill="#0B111C"/>
 <g class="rise" style="animation-delay:2.80s">
-<text x="40" y="44" font-family="'Instrument Serif', Georgia, serif" font-size="28" fill="#242A30">offensive-security-skill-development</text>
-<text x="40" y="68" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" fill="#77766F">Offensive security training materials and hands-on labs</text>
-<text x="960" y="56" text-anchor="end" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="500" fill="#245B9B">OPEN &#8599;</text>
-</g></svg>
+<text x="40" y="44" font-family="'Instrument Serif', Georgia, serif" font-size="28" fill="#E6EDF6">offensive-security-skill-development</text>
+<text x="40" y="68" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" fill="#8795AA">Offensive security training materials and hands-on labs</text>
+<text x="960" y="56" text-anchor="end" font-family="'Geist Mono', 'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="500" fill="#4C9AFF">OPEN &#8599;</text>
+</g><rect x="1" y="1" width="998" height="90" rx="20" fill="none" stroke="#1E2A3E"/></svg>
