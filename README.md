@@ -10,6 +10,8 @@
 <a href="https://www.linkedin.com/in/chetanbiranje"><img src="./cards/learn.svg" width="32.5%" alt="Learn"></a>
 </p>
 
+<p align="center"><img src="./cards/skills.svg" width="100%" alt="Focus areas"></p>
+
 <p align="center">
 <a href="https://github.com/Chetan-Biranje/webapp-pentest-framework"><img src="./cards/repo-1.svg" width="100%" alt="webapp-pentest-framework"></a>
 <a href="https://github.com/Chetan-Biranje/web-rest-api-pentest-research"><img src="./cards/repo-2.svg" width="100%" alt="web-rest-api-pentest-research"></a>

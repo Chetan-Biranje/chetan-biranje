@@ -367,6 +367,25 @@ def repos():
         save(f"repo-{i + 1}.svg", body, 1000, 92)
 
 
+FOCUS = ["Web application VAPT", "REST API security", "DevSecOps", "Offensive security",
+         "Security research", "SOC", "Bug bounty"]
+
+
+def skills():
+    chips, x, y = [], 48, 92
+    for i, t in enumerate(FOCUS):
+        w = int(len(t) * 8.2 + 32)
+        if x + w > 952:
+            x, y = 48, y + 44
+        chips.append(f'<g{cls("pop", 0.3 + i * .08)}><rect x="{x}" y="{y}" width="{w}" height="32" rx="16" fill="#12203A" stroke="{BLUE}" stroke-opacity=".55"/>'
+                     f'<text x="{x + w / 2}" y="{y + 20}" text-anchor="middle" font-family="{MONO}" font-size="13" fill="{INK}">{esc(t)}</text></g>')
+        x += w + 12
+    h = y + 32 + 28
+    body = (f'<text x="48" y="48" font-family="{SERIF}" font-size="30" fill="{INK}">Focus areas</text>'
+            f'<text x="48" y="70" font-family="{MONO}" font-size="12" fill="{MUTED}">What I work on and study.</text>{"".join(chips)}')
+    save("skills.svg", body, 1000, h)
+
+
 def main():
     d = load()
     hero()
@@ -374,6 +393,7 @@ def main():
     monthly(d)
     activity(d)
     repos()
+    skills()
     print("cards written:", len(list((ROOT / "cards").glob("*.svg"))))
 
 
