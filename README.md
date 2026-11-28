@@ -41,4 +41,4 @@ Security testing should be conducted only on authorized systems. I support respo
 <p align="center"><img src="./cards/activity.svg" width="100%" alt="GitHub contribution graph"></p>
 <p align="center"><img src="./cards/monthly.svg" width="100%" alt="Monthly GitHub contributions"></p>
 
-[Browse all repositories](https://github.com/Chetan-Biranje?tab=repositories)
+[Categorized project index](PROJECTS.md) · [Browse all repositories](https://github.com/Chetan-Biranje?tab=repositories)
