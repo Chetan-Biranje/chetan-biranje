@@ -1,21 +1,17 @@
-# Repository license review
+# Repository licensing policy
 
-Root `LICENSE` files checked on 2026-11-28. This is a file-presence review, not a legal or third-party dependency audit. Other license filenames or nested licenses may exist.
+Updated: 2026-11-28
 
-## MIT license found
+MIT (SPDX: MIT) is the default license for owner-authored projects. All 25 repositories now have a root MIT LICENSE file.
+
+## Inventory
 
 - Java_Journey (upstream copyright: ntsvg)
 - appsec-checklists-playbooks
 - python-security-utilities
 - security-recon-toolkit
 - API-Authorization-Matrix-Automated-BOLA-BFLA-Detection
-
-## Apache 2.0 license found
-
 - Aelira-Automation-OS
-
-## Root LICENSE not found
-
 - chetan-biranje
 - webapp-pentest-framework
 - web-rest-api-pentest-research
@@ -36,4 +32,12 @@ Root `LICENSE` files checked on 2026-11-28. This is a file-presence review, not 
 - CodeAlpha_Phishing_Awareness
 - CodeRaksh-Company
 
-Before adding licenses, confirm ownership, upstream attribution, existing license notices and third-party compatibility. Public visibility alone does not grant an open-source license.
+## Attribution and exceptions
+
+- Preserve all upstream copyright and third-party license notices, including Java_Journey attribution.
+- Aelira-Automation-OS retains historical Apache-2.0 terms for earlier releases; its current owner-authored material uses MIT.
+- Dependencies and third-party material retain their respective terms. Do not assume that a root MIT license supersedes those terms.
+- Use the standard, unmodified MIT text for new owner-authored projects.
+- Review dependency licenses and contributions before relicensing or redistribution.
+
+This inventory records root license changes, not a completed dependency or legal audit.
